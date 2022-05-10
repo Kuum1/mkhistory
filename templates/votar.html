@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/votar.css')}}">
+{% endblock %}
+{% block extra_title %} | votar{% endblock %}
+
+{% block content %}
+    <div class="imagenes">
+        {% for name, img in today_images.items()%}
+        <div class="moreImg">
+            <img src="{{img}}" alt="">
+            <div class="opciones" nameImage="{{name}}">
+                <i class='vote bx bx-upvote' color="#08a53c" vote="up"></i>
+                <i class='vote bx bx-downvote' color="" vote="down"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+{% block scripts %}
+<script src="{{url_for('static', filename='js/votar.js')}}"></script>
+{% endblock %}

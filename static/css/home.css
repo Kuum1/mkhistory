@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+:root {
+	--border-ligth: #474747;
+	--border-dark: #2ef5a2;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
+.MK{
+	font-family: 'Water Brush', bold;
+}
+
+.drawSection {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.Canvas {
+	outline: solid 1.5px  var(--border-ligth);
+	margin: auto;
+	margin-top: 20px;
+	background-color: #fff;
+}
+
+.InfoUltima>p{
+	margin: 0;
+}
+.ultima_imagen {
+	margin-top: 0;
+	width: 150px;
+	height: 200px;
+	margin: auto;
+	border: 1px solid var(--border-ligth);
+}
+
+.tools{
+	padding-top: 20px;
+	width: 100%;
+	height: 50px;
+	display: block;
+}
+.colors {
+	margin: auto;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+}
+.color {
+	cursor: pointer;
+	margin: 0 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #000;
+}
+
+.borrador>i {
+	cursor: pointer;
+	margin: auto;
+	justify-content: center;
+	font-size: 22px;
+}
+.botones {
+	padding: 10px;
+	width: 85%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+.botones>button>i {
+	justify-content: center;
+	margin-left: 7px;
+	font-size: 24px;
+}

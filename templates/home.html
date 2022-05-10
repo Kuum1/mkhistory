@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="drawSection">
+    <canvas id="draw" class="Canvas"></canvas>
+    <div class="InfoUltima">
+        <p>&Uacute;ltima imagen</p>
+        <img class="ultima_imagen" src="{{url_for('static', filename='imgs/elegidas/'+img_elegida)}}" alt="ultima_imagen">
+    </div>
+</section>
+<section class="tools">
+    <div class="colors">
+        <div class="color" color="blue"></div>
+        <div class="color" color="white"></div>
+        <div class="color" color="red"></div>
+        <div class="color" color="green"></div>
+        <div class="color" color="#fba919"></div>
+        <div class="color" color="#ccc"></div>
+        <div class="borrador" >
+            <i class='bx bxs-eraser' onclick="borrar()"></i>
+        </div>
+    </div>
+    <div class="botones">
+        <button type="button" id="enviar" class="btn btn-success btn-lg">Enviar</button>
+        <input id="inputFile" type="file" style="width: 0; height: 0;">
+        <button type="button" id="subir" class="btn btn-success btn-lg">Subir<i class="bx bx-download icondwn"></i></button>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{url_for('static', filename='js/home.js')}}"></script>
+{% endblock %}

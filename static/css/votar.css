@@ -1,0 +1,33 @@
+:root{
+    --border: #868686;
+}
+.imagenes {
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.moreImg {
+    padding: 10px;
+    max-width: 330px;
+    height: auto;
+    border: 1px solid var(--border);
+}
+.moreImg>img{
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+}
+.opciones {
+    width: 100%;
+    height: 50px;
+}
+.opciones{
+    display: flex;
+}
+.opciones>.bx{
+    font-size: 25px;
+    margin: auto;
+    cursor: pointer;
+}
