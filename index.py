@@ -22,7 +22,6 @@ BD = CLIENT["bu7km0az7qvdgcm"]
 
 BASE_DIR = Path(__file__).parent
 
-@app.route("/home")
 @app.get("/")
 def main():
     if not "user" in session: session["user"]= {"fecha": str(date.today())}
@@ -51,6 +50,7 @@ def save_img():
             f_img.write(image)
         coll_img.insert_one({
             "votos": 0,
+            "fecha": hoy,
             "nombre": name
         })
         session["subida"] = hoy

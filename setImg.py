@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from os import getenv
 from pathlib import Path
 from shutil import copy as copy_file
+from datetime import datetime
 import re
 
 load_dotenv()
@@ -16,8 +17,10 @@ except Exception:
 
 BD = CLIENT["bu7km0az7qvdgcm"]
 
+hoy = datetime.now()
+
 coll_imgs = BD.imagenes
-imagen_elegida = [doc["nombre"] for doc in coll_imgs.find({}).sort('votos', DESCENDING).limit(1)]
+imagen_elegida = [doc["nombre"] for doc in coll_imgs.find({"fecha":hoy}).sort('votos', DESCENDING).limit(1)]
 
 regex = re.compile(r"\d{4}\-\d{2}\-\d{,2}")
 dir_static = BASE_DIR / "static"
